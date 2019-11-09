@@ -1,0 +1,22 @@
+<h1 mat-dialog-title>Todo</h1>
+<div mat-dialog-content>
+  <form [formGroup]="todo_form">
+    <mat-form-field class="width-100">
+      <textarea
+        matInput
+        matTextareaAutosize
+        placeholder="Describe your next todo..."
+        required
+        formControlName="description"
+        #description
+        >
+      </textarea>
+    </mat-form-field>
+  </form>
+  <mat-divider [vertical]="false"></mat-divider>
+  <app-upload class="width-100"></app-upload>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="cancel()">Cancel</button>
+  <button mat-button color="accent" (click)="submit()" cdkFocusInitial>Save</button>
+</div>

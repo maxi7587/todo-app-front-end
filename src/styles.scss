@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+
+.width-100 {
+  width: 100% !important;
+}
+
+.dotted-container {
+  padding: 8px;
+  border: rgba(255, 255, 255, 0.3) 2px dashed;
+  border-radius: 4px
+}
+
+.mat-dialog-actions, .actions-cell {
+  margin-top: 16px;
+  justify-content: flex-end;
+}

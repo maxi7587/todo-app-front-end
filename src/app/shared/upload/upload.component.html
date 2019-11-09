@@ -1,0 +1,41 @@
+<div
+  fxLayout="column"
+  fxLayoutAlign="start stretch"
+  class="dotted-container"
+  >
+  <div
+    class="drop-container"
+    ngFileDrop
+    [options]="options"
+    (uploadOutput)="onUploadOutput($event)"
+    [uploadInput]="uploadInput"
+    [ngClass]="{ 'is-drop-over': dragOver }"
+    >
+    <h4 class="mat-subheading-1">Drag &amp; Drop your files here.</h4>
+  </div>
+
+  <input
+    mat-button
+    type="file"
+    ngFileSelect
+    [options]="options"
+    (uploadOutput)="onUploadOutput($event)"
+    [uploadInput]="uploadInput"
+    multiple
+    >
+  <!-- <label class="upload-button">
+    <input
+      matInput
+      type="file"
+      ngFileSelect
+      [options]="options"
+      (uploadOutput)="onUploadOutput($event)"
+      [uploadInput]="uploadInput"
+      multiple
+      >
+  </label> -->
+
+  <!-- <button mat-button type="button" class="start-upload-btn" (click)="startUpload()">
+    Start Upload
+  </button> -->
+</div>
